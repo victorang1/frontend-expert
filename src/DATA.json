@@ -1,0 +1,102 @@
+{
+  "restaurants": [
+    {
+      "id": "6c7bqjgi84kcowlqdz",
+      "name": "Bring Your Phone Cafe",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41",
+      "city": "Medan",
+      "rating": 4.6
+    },
+    {
+      "id": "ljx8i0qu2uckcowlqdz",
+      "name": "Run The Gun",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/07",
+      "city": "Bali",
+      "rating": 4.6
+    },
+    {
+      "id": "fe8bbxoazddkcowlqdz",
+      "name": "Pangsit Express",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/29",
+      "city": "Ternate",
+      "rating": 4.8
+    },
+    {
+      "id": "ik1zljmlf68kcowlqdz",
+      "name": "Ducky Duck",
+      "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/38",
+      "city": "Malang",
+      "rating": 4.7
+    },
+    {
+      "id": "9jpuzkm6n6jkcowlqdz",
+      "name": "Kafein",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/40",
+      "city": "Bali",
+      "rating": 3.8
+    },
+    {
+      "id": "cpl5jpsnuqkkcowlqdz",
+      "name": "Makan mudah",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/08",
+      "city": "Malang",
+      "rating": 4.6
+    },
+    {
+      "id": "iqtf9hmdzvbkcowlqdz",
+      "name": "Saya Suka",
+      "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/32",
+      "city": "Surabaya",
+      "rating": 3.6
+    },
+    {
+      "id": "8i06gqcc2dpkcowlqdz",
+      "name": "Gigitan Cepat",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/45",
+      "city": "Aceh",
+      "rating": 4
+    },
+    {
+      "id": "wf5o19xhxxkcowlqdz",
+      "name": "Fairy Cafe",
+      "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
+      "pictureId": "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/04",
+      "city": "Malang",
+      "rating": 3.9
+    }
+  ],
+  "topRestaurants": [
+    {
+      "id": "5e1578b2-2150-42aa-b4af-d2ae358c78c",
+      "name": "Bandar Dkakarta",
+      "description": "As a major metropolis, many people forget that Jakarta is still a seaside city with access to the freshest seafood. Bandar Djakarta serves some of the best seafood dishes in a modern setting. Diners can choose fresh fish, crabs, clams, and prawns, directly from the aquarium. Even with the endless food and restaurant options in Jakarta this restaurant remains in high demand, serving hundreds daily and even more on special occasions.",
+      "pictureId": "http://m.ayopurwakarta.com/images-purwakarta/post/articles/2019/07/21/2826/bd-ancol-828x551.jpg",
+      "city": "Jakarta",
+      "rating": 4.5
+    },
+    {
+      "id": "edafc8ed-a2c2-4210-bf53-b9e43f3a5cdc",
+      "name": "Locavore",
+      "description": "This restaurant in Bali is known and loved for its innovative menu and fancy dishes made with premium ingredients, presented in an almost theatrical way. Locavore operates according to eco-friendly concepts, sourcing premium-quality ingredients (and even utensils) locally. Visitors can learn about their meal’s ingredients: where they came from and even their story. The cozy, intimate restaurant is located in Bali’s cultural hub, Ubud.",
+      "pictureId": "https://cdn.water-sport-bali.com/wp-content/uploads/2014/09/Restaurant-Locavore-Ubud-Twitter.jpg",
+      "city": "Bali",
+      "rating": 4.5
+    },
+    {
+      "id": "ddd7f893-9237-4332-8095-132ef960ae0c",
+      "name": "Mozaic",
+      "description": "Chef Chris Salans has helped make this restaurant what it is — a trendy destination known for its innovative menu. Combining French cooking techniques and Balinese traditional recipes and ingredients, guests can expect to have an unforgettable meal unlike anything they could enjoy elsewhere. A perfect ambiance has been created with a lush tropical garden, pool, and indoor and outdoor seating with unrestricted views of Ubud’s dense palm trees.",
+      "pictureId": "https://media-cdn.tripadvisor.com/media/photo-s/12/0c/6c/1b/mozaic-s-outdoor-dining.jpg",
+      "city": "Bali",
+      "rating": 4.5
+    }
+  ]
+}
