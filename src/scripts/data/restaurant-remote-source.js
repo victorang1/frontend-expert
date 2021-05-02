@@ -10,7 +10,7 @@ class RestaurantRemoteSource {
   static async getDetailRestaurant(restaurantId) {
     const response = await fetch(RESTAURANT_API.DETAIL(restaurantId));
     const responseJson = await response.json();
-    return responseJson.results;
+    return responseJson.restaurant;
   }
 
   static async searchRestaurant(name) {
