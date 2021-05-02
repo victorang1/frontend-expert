@@ -39,7 +39,7 @@
     }
 
     .nav-title {
-        font-size: size(large);
+        font-size: size(medium);
     }
 
     .nav-right {
@@ -94,7 +94,7 @@
             transition: transform 0.3s ease;
 
             .nav-item {
-                margin: 12px 0px;
+                margin: 12px 0;
 
                 a {
                     font-size: 18px;
@@ -157,7 +157,7 @@
     }
 }
 
-.main-wrapper {
+#main-wrapper {
     padding: 16px 20px;
     width: 100%;
 
@@ -167,11 +167,13 @@
     }
 
     .rests {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .rest-item {
             margin: 20px;
+            width: 30%;
             box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
             border-radius: 16px;
             padding: 0;
@@ -208,6 +210,9 @@
 
                 .rest-title {
                     font-size: 30px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
 
                     &:hover {
                         color: $text-color;
@@ -215,15 +220,33 @@
                 }
 
                 .rest-rating {
-                    font-size: 24px;
+                    margin-left: 4px;
+                    font-size: 20px;
                     color: $text-color;
                 }
 
-                p {
+                .rest-desc {
                     margin-top: 11px;
                     text-align: justify;
-                    font-size: size(regular);   
+                    font-size: size(regular);
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
                 }
+            }
+        }
+    }
+
+    @include tablet {
+        .rests {
+            @include dFlex(row);
+            flex-wrap: wrap;
+
+            .rest-item {
+                margin: 8px;
+                width: 45%;
             }
         }
     }
@@ -236,9 +259,9 @@
 
             .rest-item {
                 margin: 8px;
+                width: 100%;
 
                 &-body {
-
                     .rest-title {
                         font-size: 24px;
                     }
@@ -247,18 +270,11 @@
                         font-size: 18px;
                     }
 
-                    p {
-                        font-size: 14px;
+                    .rest-desc {
+                        font-size: 16px;
                     }
                 }
             }
-        }
-    }
-
-    @include tablet {
-        .rests {
-            @include dFlex(row);
-            flex-wrap: wrap;
         }
     }
 }
