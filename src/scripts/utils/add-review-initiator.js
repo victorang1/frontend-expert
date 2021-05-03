@@ -27,20 +27,26 @@ const AddReviewInitiator = {
   async _postReview() {
     const inputName = $('#name');
     const inputReview = $('#review');
-    const body = {
-      id: this._restaurantId,
-      review: inputReview.val(),
-      name: inputName.val(),
-    };
-    inputName.val('');
-    inputReview.val('');
-    try {
-        const response = await RestaurantRemoteSource.addReview(body);
-        const { customerReviews } = response;
-    } catch (ex) {
-        alert (ex);
+    
+    if (inputName.val() == '' || inputReview.val() == '') {
+      alert('All field must be input');
     }
-    this._refreshContent(customerReviews);
+    else {
+      const body = {
+        id: this._restaurantId,
+        review: inputReview.val(),
+        name: inputName.val(),
+      };
+      inputName.val('');
+      inputReview.val('');
+      try {
+          const response = await RestaurantRemoteSource.addReview(body);
+          const { customerReviews } = response;
+          this._refreshContent(customerReviews)
+      } catch (ex) {
+          alert (ex);
+      };
+    }
   },
 };
 

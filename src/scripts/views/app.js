@@ -28,17 +28,20 @@ class App {
     this._showLoading(true);
     this._content.empty();
     this._content.append(await page.render());
-    this._validateHeroVisibility(url);
+    this._validateContentVisibility(url);
     await page.afterRender();
     this._showLoading(false);
   }
 
-  _validateHeroVisibility(url) {
+  _validateContentVisibility(url) {
     const heroContainer = $('.hero');
+    const skipLinkContainer = $('.skip-link');
     if (url === '/') {
       heroContainer.show();
+      skipLinkContainer.show();
     } else {
       heroContainer.hide();
+      skipLinkContainer.hide();
     }
   }
 
