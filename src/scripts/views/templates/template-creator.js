@@ -14,6 +14,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         <figure>
             <img
                 class="rest-img"
+                crossorigin="anonymous"
                 src="${API_IMAGE.small(restaurant.pictureId)}" 
                 alt="${restaurant.name}" />
             <figcaption>${restaurant.city}</figcaption>

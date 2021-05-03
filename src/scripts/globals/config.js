@@ -6,6 +6,7 @@ const CONFIG = {
   DATABASE_NAME: 'restaurant-catalogue-database',
   DATABASE_VERSION: 1,
   OBJECT_STORE_NAME: 'favorites',
+  AUTH_TOKEN: '12345',
 };
 
 const API_IMAGE = {

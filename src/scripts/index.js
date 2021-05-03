@@ -1,10 +1,11 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import $ from 'jquery';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all';
+
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
-import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
-import '../../node_modules/@fortawesome/fontawesome-free/js/all.js';
 import '../styles/main.scss';
 import '../styles/detail.scss';
 import '../styles/loading.scss';

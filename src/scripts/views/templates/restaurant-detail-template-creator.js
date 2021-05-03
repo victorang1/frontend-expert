@@ -13,6 +13,7 @@ export const createRestaurantDetailTemplate = ({
             <div id="action-container"></div>
             <img
                 class="img-content" 
+                crossorigin="anonymous"
                 src="${API_IMAGE.small(pictureId)}" 
                 alt="${name}" />
             <div class="card-content-body">

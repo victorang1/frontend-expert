@@ -1,4 +1,5 @@
 import RESTAURANT_API from '../globals/api-endpoint';
+import CONFIG from '../globals/config';
 
 class RestaurantRemoteSource {
   static async getListRestaurant() {
@@ -30,7 +31,7 @@ class RestaurantRemoteSource {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Auth-Token': '12345',
+        'X-Auth-Token': CONFIG.AUTH_TOKEN,
       },
       body: JSON.stringify(data),
     };

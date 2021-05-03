@@ -16,7 +16,6 @@ const ListRestaurant = {
 
   async afterRender() {
     const restaurants = await RestaurantRemoteSource.getListRestaurant();
-    console.log(restaurants);
     const restaurantsContainer = $('#restaurant-content');
     restaurantsContainer.empty();
     restaurants.forEach((movie) => {
