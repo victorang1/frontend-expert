@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import {
+  createRestaurantItemTemplate,
+  createNoDataTemplate,
+} from '../templates/template-creator';
 
 const Favorite = {
   async render() {
@@ -18,6 +21,9 @@ const Favorite = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = $('#restaurant-content');
     restaurantsContainer.empty();
+    if (restaurants.length == 0) {
+      restaurantsContainer.append(createNoDataTemplate());
+    }
     restaurants.forEach((movie) =>
       restaurantsContainer.append(createRestaurantItemTemplate(movie)),
     );

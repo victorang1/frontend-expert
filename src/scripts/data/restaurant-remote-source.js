@@ -2,7 +2,7 @@ import RESTAURANT_API from '../globals/api-endpoint';
 
 class RestaurantRemoteSource {
   static async getListRestaurant() {
-    const response = await fetch(RESTAURANT_API.GET_ALL_RESTAURANT);
+    const response = await fetch(RESTAURANT_API.getAllRestaurant);
     const responseJson = await response.json();
     return responseJson.restaurants;
   }
