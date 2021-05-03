@@ -2,7 +2,7 @@ import $ from 'jquery';
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import {
   createRestaurantItemTemplate,
-  createNoDataTemplate,
+  createErrorTemplate,
 } from '../templates/template-creator';
 
 const Favorite = {
@@ -22,7 +22,7 @@ const Favorite = {
     const restaurantsContainer = $('#restaurant-content');
     restaurantsContainer.empty();
     if (restaurants.length == 0) {
-      restaurantsContainer.append(createNoDataTemplate());
+      restaurantsContainer.append(createErrorTemplate());
     }
     restaurants.forEach((movie) =>
       restaurantsContainer.append(createRestaurantItemTemplate(movie)),

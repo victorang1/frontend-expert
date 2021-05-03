@@ -34,11 +34,11 @@ const createRestaurantItemTemplate = (restaurant) => `
     </article>
 `;
 
-const createNoDataTemplate = () => `
-    <h1 class="text-no-data">No Data</h1>
+const createErrorTemplate = (msg = 'No Data') => `
+    <h1 class="text-no-data">${msg}</h1>
 `;
 
-export { createNoDataTemplate, createRestaurantItemTemplate };
+export { createErrorTemplate, createRestaurantItemTemplate };
 export {
   addReviewTemplate,
   createCategoryTemplate,

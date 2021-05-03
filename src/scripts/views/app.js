@@ -2,6 +2,7 @@ import $ from 'jquery';
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
+import { createErrorTemplate } from '../views/templates/template-creator';
 
 class App {
   constructor({ button, drawer, content, hero }) {
@@ -25,12 +26,17 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._showLoading(true);
-    this._content.empty();
-    this._content.append(await page.render());
-    this._validateContentVisibility(url);
-    await page.afterRender();
-    this._showLoading(false);
+    try {
+      this._showLoading(true);
+      this._content.empty();
+      this._content.append(await page.render());
+      this._validateContentVisibility(url);
+      await page.afterRender();
+    } catch (ex) {
+      this._renderErrorMessage(ex);
+    } finally {
+      this._showLoading(false);
+    }
   }
 
   _validateContentVisibility(url) {
@@ -50,6 +56,12 @@ class App {
     if (isVisible) {
       loadingContainer.show();
     } else loadingContainer.hide();
+  }
+
+  _renderErrorMessage(msg) {
+    const errorMessageContainer = $('.error-message-container');
+    errorMessageContainer.empty();
+    errorMessageContainer.append(createErrorTemplate(msg));
   }
 }
 
