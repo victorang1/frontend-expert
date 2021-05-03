@@ -34,8 +34,12 @@ const AddReviewInitiator = {
     };
     inputName.val('');
     inputReview.val('');
-    const response = await RestaurantRemoteSource.addReview(body);
-    const { customerReviews } = response;
+    try {
+        const response = await RestaurantRemoteSource.addReview(body);
+        const { customerReviews } = response;
+    } catch (ex) {
+        alert (ex);
+    }
     this._refreshContent(customerReviews);
   },
 };
