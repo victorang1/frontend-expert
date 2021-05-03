@@ -19,11 +19,11 @@ class RestaurantRemoteSource {
   }
 
   static async addReview(data) {
-    const response = await fetch(RESTAURANT_API.ADD_REVIEW(), initAddReviewOptions(data));
+    const response = await fetch(RESTAURANT_API.ADD_REVIEW, this._initAddReviewOptions(data));
     return response.json();
   }
 
-  initAddReviewOptions(data) {
+  static _initAddReviewOptions(data) {
     return {
         method: 'POST',
         headers: {

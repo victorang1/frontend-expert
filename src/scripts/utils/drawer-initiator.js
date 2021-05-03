@@ -13,6 +13,11 @@ const DrawerInitiator = {
     event.stopPropagation();
     drawer.toggleClass('open');
   },
+
+  _closeDrawer(event, drawer) {
+    event.stopPropagation();
+    drawer.removeClass('open');
+  },
 };
 
 export default DrawerInitiator;

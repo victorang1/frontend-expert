@@ -1,9 +1,13 @@
 import { API_IMAGE } from '../../globals/config';
 import { 
-    createRestaurantDetailTemplate, 
-    createCategoryTemplate, 
-    createMenuTemplate 
-} from './restaurant-detail-creator';
+    addReviewTemplate,
+    createCategoryTemplate,
+    createCustomerReviewItemTemplate,
+    createLikeButtonTemplate,
+    createLikedButtonTemplate,
+    createMenuTemplate,
+    createRestaurantDetailTemplate,
+} from './restaurant-detail-template-creator';
 
 const createRestaurantItemTemplate = (restaurant) => `
     <article tabIndex="0" class="rest-item">
@@ -24,9 +28,13 @@ const createRestaurantItemTemplate = (restaurant) => `
     </article>
 `;
 
+export { createRestaurantItemTemplate };
 export {
+    addReviewTemplate,
     createCategoryTemplate,
+    createCustomerReviewItemTemplate,
+    createLikeButtonTemplate,
+    createLikedButtonTemplate,
     createMenuTemplate,
-    createRestaurantItemTemplate,
-    createRestaurantDetailTemplate
-};
+    createRestaurantDetailTemplate,
+}
