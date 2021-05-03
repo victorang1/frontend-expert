@@ -9,9 +9,9 @@ const CONFIG = {
 };
 
 const API_IMAGE = {
-  SMALL: (pictureId) => `${CONFIG.BASE_IMAGE_URL}/small/${pictureId}`,
-  MEDIUM: (pictureId) => `${CONFIG.BASE_IMAGE_URL}/medium/${pictureId}`,
-  LARGE: (pictureId) => `${CONFIG.BASE_IMAGE_URL}/large/${pictureId}`,
+  small: (pictureId) => `${CONFIG.BASE_IMAGE_URL}/small/${pictureId}`,
+  medium: (pictureId) => `${CONFIG.BASE_IMAGE_URL}/medium/${pictureId}`,
+  large: (pictureId) => `${CONFIG.BASE_IMAGE_URL}/large/${pictureId}`,
 };
 
 export { API_IMAGE };

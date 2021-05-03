@@ -19,7 +19,7 @@ const ListRestaurant = {
     const restaurantsContainer = $('#restaurant-content');
     restaurantsContainer.empty();
     restaurants.forEach((movie) => {
-        restaurantsContainer.append(createRestaurantItemTemplate(movie));
+      restaurantsContainer.append(createRestaurantItemTemplate(movie));
     });
   },
 };

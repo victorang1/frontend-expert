@@ -8,30 +8,32 @@ class RestaurantRemoteSource {
   }
 
   static async getDetailRestaurant(restaurantId) {
-    const response = await fetch(RESTAURANT_API.DETAIL(restaurantId));
+    const response = await fetch(RESTAURANT_API.detail(restaurantId));
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
 
   static async searchRestaurant(name) {
-    const response = await fetch(RESTAURANT_API.SEARCH_RESTAURANT(name));
+    const response = await fetch(RESTAURANT_API.searchRestaurant(name));
     return response.json();
   }
 
   static async addReview(data) {
-    const response = await fetch(RESTAURANT_API.ADD_REVIEW, this._initAddReviewOptions(data));
+    const response = await fetch(
+        RESTAURANT_API.addReview, this._initAddReviewOptions(data),
+    );
     return response.json();
   }
 
   static _initAddReviewOptions(data) {
     return {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Auth-Token': '12345'
-        },
-        body: JSON.stringify(data)
-    }
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Auth-Token': '12345',
+      },
+      body: JSON.stringify(data),
+    };
   }
 }
 

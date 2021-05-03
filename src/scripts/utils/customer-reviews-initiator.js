@@ -1,4 +1,6 @@
-import { createCustomerReviewItemTemplate } from '../views/templates/template-creator';
+import {
+  createCustomerReviewItemTemplate,
+} from '../views/templates/template-creator';
 
 const CustomerReviewsInitiator = {
   async init({ customerReviewsContainer, customerReviews }) {
@@ -11,8 +13,8 @@ const CustomerReviewsInitiator = {
     this._customerReviewsContainer.empty();
     this._customerReviews.forEach((item) =>
       this._customerReviewsContainer.append(
-        createCustomerReviewItemTemplate(item)
-      )
+          createCustomerReviewItemTemplate(item),
+      ),
     );
   },
 };

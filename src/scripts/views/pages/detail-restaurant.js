@@ -19,12 +19,12 @@ const DetailRestaurant = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailRestaurant = await RestaurantRemoteSource.getDetailRestaurant(
-      url.id
+        url.id,
     );
     const detailRestaurantContainer = $('#detail-container');
     detailRestaurantContainer.empty();
     detailRestaurantContainer.append(
-      createRestaurantDetailTemplate(detailRestaurant)
+        createRestaurantDetailTemplate(detailRestaurant),
     );
 
     const { menus, categories, customerReviews } = detailRestaurant;
@@ -39,7 +39,7 @@ const DetailRestaurant = {
   _displayCategory(categories) {
     const categoryContainer = $('.category-container');
     categories.forEach((category) =>
-      categoryContainer.append(createCategoryTemplate(category))
+      categoryContainer.append(createCategoryTemplate(category)),
     );
   },
 
@@ -47,10 +47,10 @@ const DetailRestaurant = {
     const foodsContainer = $('#foods');
     const drinksContainer = $('#drinks');
     menus.foods.forEach((food) =>
-      foodsContainer.append(createMenuTemplate(food))
+      foodsContainer.append(createMenuTemplate(food)),
     );
     menus.drinks.forEach((drink) =>
-      drinksContainer.append(createMenuTemplate(drink))
+      drinksContainer.append(createMenuTemplate(drink)),
     );
   },
 
@@ -72,9 +72,9 @@ const DetailRestaurant = {
     AddReviewInitiator.init({
       restaurantId,
       addReviewContainer: $('#add-review-container'),
-      refreshContent: this._displayCustomerReviews
+      refreshContent: this._displayCustomerReviews,
     });
-  }
+  },
 };
 
 export default DetailRestaurant;

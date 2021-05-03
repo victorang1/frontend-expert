@@ -18,9 +18,9 @@ const Favorite = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = $('#restaurant-content');
     restaurantsContainer.empty();
-    restaurants.forEach((movie) => {
-        restaurantsContainer.append(createRestaurantItemTemplate(movie));
-    });
+    restaurants.forEach((movie) =>
+      restaurantsContainer.append(createRestaurantItemTemplate(movie)),
+    );
   },
 };
 

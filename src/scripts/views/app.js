@@ -18,7 +18,7 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
-      hero: this._hero
+      hero: this._hero,
     });
   }
 
@@ -49,8 +49,7 @@ class App {
     const loadingContainer = $('.loader-container');
     if (isVisible) {
       loadingContainer.show();
-    }
-    else loadingContainer.hide();
+    } else loadingContainer.hide();
   }
 }
 

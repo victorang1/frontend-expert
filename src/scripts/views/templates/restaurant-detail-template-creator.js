@@ -11,7 +11,10 @@ export const createRestaurantDetailTemplate = ({
     <div class="detail-container">
         <div class="card-container">
             <div id="action-container"></div>
-            <img class="img-content" src="${API_IMAGE.SMALL(pictureId)}" alt="${name}">
+            <img
+                class="img-content" 
+                src="${API_IMAGE.small(pictureId)}" 
+                alt="${name}" />
             <div class="card-content-body">
                 <div tabIndex="0" class="show-title">
                     ${name}<span class="rest-rating">(${rating}★)</span>
@@ -92,6 +95,11 @@ export const createCustomerReviewItemTemplate = ({ name, review, date }) => `
 export const addReviewTemplate = () => `
     <h1 tabIndex="0" class="reviews-section">Add Review</h1>
     <input type="text" placeholder="Input your name" name="name" id="name" />
-    <input type="text" placeholder="Input your review" name="review" id="review" />
+    <input 
+        type="text"
+        placeholder="Input your review"
+        name="review"
+        id="review"
+    />
     <button id="btn-add-review">Add Review</button>
-`
+`;

@@ -27,11 +27,10 @@ const AddReviewInitiator = {
   async _postReview() {
     const inputName = $('#name');
     const inputReview = $('#review');
-    
+
     if (inputName.val() == '' || inputReview.val() == '') {
       alert('All field must be input');
-    }
-    else {
+    } else {
       const body = {
         id: this._restaurantId,
         review: inputReview.val(),
@@ -40,12 +39,12 @@ const AddReviewInitiator = {
       inputName.val('');
       inputReview.val('');
       try {
-          const response = await RestaurantRemoteSource.addReview(body);
-          const { customerReviews } = response;
-          this._refreshContent(customerReviews)
+        const response = await RestaurantRemoteSource.addReview(body);
+        const { customerReviews } = response;
+        this._refreshContent(customerReviews);
       } catch (ex) {
-          alert (ex);
-      };
+        alert(ex);
+      }
     }
   },
 };
