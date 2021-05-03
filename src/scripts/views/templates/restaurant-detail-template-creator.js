@@ -96,11 +96,11 @@ export const createCustomerReviewItemTemplate = ({ name, review, date }) => `
 export const addReviewTemplate = () => `
     <h1 tabIndex="0" class="reviews-section">Add Review</h1>
     <input type="text" placeholder="Input your name" name="name" id="name" />
-    <input 
-        type="text"
+    <textarea 
         placeholder="Input your review"
         name="review"
         id="review"
-    />
+        rows="5"
+    ></textarea>
     <button id="btn-add-review">Add Review</button>
 `;
