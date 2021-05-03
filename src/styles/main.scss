@@ -44,6 +44,9 @@ button, a {
         text-align: center;
         text-decoration: none;
         color: $text-color;
+        background-color: transparent;
+        border: none;
+        outline: none;
     }
 
     .nav-title {
@@ -83,6 +86,9 @@ button, a {
 
             .nav-menu {
                 cursor: pointer;
+                background-color: transparent;
+                outline: none;
+                border: none;
             }
         }
 
@@ -122,6 +128,9 @@ button, a {
 
         .nav-menu {
             display: none;
+            background-color: transparent;
+            outline: none;
+            border: none;
         }
 
         .nav-right {
@@ -140,6 +149,9 @@ button, a {
         align-items: center;
         .nav-menu {
             display: none;
+            background-color: transparent;
+            outline: none;
+            border: none;
         }
     }
 }
