@@ -27,8 +27,8 @@ class App {
     const page = routes[url];
     try {
       this._showLoading(true);
-      this._content.empty();
-      this._content.append(await page.render());
+      this._content.innerHTML = '';
+      this._content.innerHTML = await page.render();
       this._validateContentVisibility(url);
       await page.afterRender();
     } catch (ex) {
@@ -42,19 +42,19 @@ class App {
     const heroContainer = document.querySelector('.hero');
     const skipLinkContainer = document.querySelector('.skip-link');
     if (url === '/') {
-      heroContainer.style.visibility = 'visible';
-      skipLinkContainer.style.visibility = 'visible';
+      heroContainer.style.display = 'flex';
+      skipLinkContainer.style.display = 'block';
     } else {
-      heroContainer.style.visibility = 'hidden';
-      skipLinkContainer.style.visibility = 'hidden';
+      heroContainer.style.display = 'none';
+      skipLinkContainer.style.display = 'none';
     }
   }
 
   _showLoading(isVisible) {
     const loadingContainer = document.querySelector('.loader-container');
     if (isVisible) {
-      loadingContainer.style.visibility = 'visible';
-    } else loadingContainer.style.visibility = 'hidden';
+      loadingContainer.style.display = 'inline-block';
+    } else loadingContainer.style.display = 'none';
   }
 
   _renderErrorMessage(msg) {

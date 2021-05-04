@@ -23,7 +23,7 @@ const DetailRestaurant = {
     const detailRestaurantContainer = document
         .querySelector('#detail-container');
     detailRestaurantContainer.innerHTML = '';
-    detailRestaurantContainer =
+    detailRestaurantContainer.innerHTML =
         createRestaurantDetailTemplate(detailRestaurant);
 
     const { menus, categories, customerReviews } = detailRestaurant;
