@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import RestaurantRemoteSource from '../../data/restaurant-remote-source';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
@@ -16,10 +15,10 @@ const ListRestaurant = {
 
   async afterRender() {
     const restaurants = await RestaurantRemoteSource.getListRestaurant();
-    const restaurantsContainer = $('#restaurant-content');
-    restaurantsContainer.empty();
+    const restaurantsContainer = document.querySelector('#restaurant-content');
+    restaurantsContainer.innerHTML = '';
     restaurants.forEach((movie) => {
-      restaurantsContainer.append(createRestaurantItemTemplate(movie));
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(movie);
     });
   },
 };

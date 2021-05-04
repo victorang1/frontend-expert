@@ -10,11 +10,10 @@ const CustomerReviewsInitiator = {
   },
 
   _renderReviews() {
-    this._customerReviewsContainer.empty();
+    this._customerReviewsContainer.innerHTML = '';
     this._customerReviews.forEach((item) =>
-      this._customerReviewsContainer.append(
-          createCustomerReviewItemTemplate(item),
-      ),
+      this._customerReviewsContainer.innerHTML +=
+        createCustomerReviewItemTemplate(item),
     );
   },
 };

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
@@ -40,28 +39,29 @@ class App {
   }
 
   _validateContentVisibility(url) {
-    const heroContainer = $('.hero');
-    const skipLinkContainer = $('.skip-link');
+    const heroContainer = document.querySelector('.hero');
+    const skipLinkContainer = document.querySelector('.skip-link');
     if (url === '/') {
-      heroContainer.show();
-      skipLinkContainer.show();
+      heroContainer.style.visibility = 'visible';
+      skipLinkContainer.style.visibility = 'visible';
     } else {
-      heroContainer.hide();
-      skipLinkContainer.hide();
+      heroContainer.style.visibility = 'hidden';
+      skipLinkContainer.style.visibility = 'hidden';
     }
   }
 
   _showLoading(isVisible) {
-    const loadingContainer = $('.loader-container');
+    const loadingContainer = document.querySelector('.loader-container');
     if (isVisible) {
-      loadingContainer.show();
-    } else loadingContainer.hide();
+      loadingContainer.style.visibility = 'visible';
+    } else loadingContainer.style.visibility = 'hidden';
   }
 
   _renderErrorMessage(msg) {
-    const errorMessageContainer = $('.error-message-container');
-    errorMessageContainer.empty();
-    errorMessageContainer.append(createErrorTemplate(msg));
+    const errorMessageContainer = document
+        .querySelector('.error-message-container');
+    errorMessageContainer.innerHTML = '';
+    errorMessageContainer.innerHTML = createErrorTemplate(msg);
   }
 }
 

@@ -1,5 +1,4 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import $ from 'jquery';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all';
 
@@ -11,10 +10,10 @@ import '../styles/detail.scss';
 import '../styles/loading.scss';
 
 const app = new App({
-  button: $('#menu'),
-  drawer: $('#drawer'),
-  hero: $('.hero'),
-  content: $('#main-wrapper'),
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  hero: document.querySelector('.hero'),
+  content: document.querySelector('#main-wrapper'),
 });
 
 window.addEventListener('hashchange', () => {

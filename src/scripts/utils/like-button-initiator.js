@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
 import {
   createLikeButtonTemplate,
@@ -15,7 +14,7 @@ const LikeButtonInitiator = {
   async _renderButton() {
     const { id } = this._restaurant;
 
-    this._likeButtonContainer.empty();
+    this._likeButtonContainer.innerHTML = '';
     if (await this._isRestaurantExist(id)) {
       this._renderLiked();
     } else {
@@ -31,8 +30,8 @@ const LikeButtonInitiator = {
   _renderLike() {
     this._likeButtonContainer.append(createLikeButtonTemplate());
 
-    const likeButton = $('#btn-heart');
-    likeButton.on('click', async () => {
+    const likeButton = document.querySelector('#btn-heart');
+    likeButton.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
       this._renderButton();
     });
@@ -41,8 +40,8 @@ const LikeButtonInitiator = {
   _renderLiked() {
     this._likeButtonContainer.append(createLikedButtonTemplate());
 
-    const likeButton = $('#btn-heart');
-    likeButton.on('click', async () => {
+    const likeButton = document.querySelector('#btn-heart');
+    likeButton.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
     });

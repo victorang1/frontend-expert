@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import UrlParser from '../../routes/url-parser';
 import RestaurantRemoteSource from '../../data/restaurant-remote-source';
 import {
@@ -21,11 +20,11 @@ const DetailRestaurant = {
     const detailRestaurant = await RestaurantRemoteSource.getDetailRestaurant(
         url.id,
     );
-    const detailRestaurantContainer = $('#detail-container');
-    detailRestaurantContainer.empty();
-    detailRestaurantContainer.append(
-        createRestaurantDetailTemplate(detailRestaurant),
-    );
+    const detailRestaurantContainer = document
+        .querySelector('#detail-container');
+    detailRestaurantContainer.innerHTML = '';
+    detailRestaurantContainer =
+        createRestaurantDetailTemplate(detailRestaurant);
 
     const { menus, categories, customerReviews } = detailRestaurant;
 
@@ -37,33 +36,35 @@ const DetailRestaurant = {
   },
 
   _displayCategory(categories) {
-    const categoryContainer = $('.category-container');
+    const categoryContainer = document.querySelector('.category-container');
     categories.forEach((category) =>
-      categoryContainer.append(createCategoryTemplate(category)),
+      categoryContainer.innerHTML += createCategoryTemplate(category),
     );
   },
 
   _displayMenu(menus) {
-    const foodsContainer = $('#foods');
-    const drinksContainer = $('#drinks');
+    const foodsContainer = document.querySelector('#foods');
+    const drinksContainer = document.querySelector('#drinks');
+    foodsContainer.innerHTML = '';
+    drinksContainer.innerHTML = '';
     menus.foods.forEach((food) =>
-      foodsContainer.append(createMenuTemplate(food)),
+      foodsContainer.innerHTML += createMenuTemplate(food),
     );
     menus.drinks.forEach((drink) =>
-      drinksContainer.append(createMenuTemplate(drink)),
+      drinksContainer.innerHTML += createMenuTemplate(drink),
     );
   },
 
   _displayActionMenu(detailRestaurant) {
     LikeButtonInitiator.init({
-      likeButtonContainer: $('#action-container'),
+      likeButtonContainer: document.querySelector('#action-container'),
       restaurant: detailRestaurant,
     });
   },
 
   _displayCustomerReviews(customerReviews) {
     CustomerReviewsInitiator.init({
-      customerReviewsContainer: $('#reviews-container'),
+      customerReviewsContainer: document.querySelector('#reviews-container'),
       customerReviews,
     });
   },
@@ -71,7 +72,7 @@ const DetailRestaurant = {
   _displayAddReviewContainer(restaurantId) {
     AddReviewInitiator.init({
       restaurantId,
-      addReviewContainer: $('#add-review-container'),
+      addReviewContainer: document.querySelector('#add-review-container'),
       refreshContent: this._displayCustomerReviews,
     });
   },

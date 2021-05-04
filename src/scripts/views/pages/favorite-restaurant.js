@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import {
   createRestaurantItemTemplate,
@@ -19,13 +18,13 @@ const Favorite = {
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
-    const restaurantsContainer = $('#restaurant-content');
-    restaurantsContainer.empty();
+    const restaurantsContainer = document.querySelector('#restaurant-content');
+    restaurantsContainer.innerHTML = '';
     if (restaurants.length == 0) {
-      restaurantsContainer.append(createErrorTemplate());
+      restaurantsContainer.innerHTML = createErrorTemplate();
     }
     restaurants.forEach((movie) =>
-      restaurantsContainer.append(createRestaurantItemTemplate(movie)),
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(movie),
     );
   },
 };

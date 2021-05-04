@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import RestaurantRemoteSource from '../data/restaurant-remote-source';
 import { addReviewTemplate } from '../views/templates/template-creator';
 
@@ -12,32 +11,32 @@ const AddReviewInitiator = {
   },
 
   _renderAddReview() {
-    this._addReviewContainer.empty();
-    this._addReviewContainer.append(addReviewTemplate());
+    this._addReviewContainer.innerHTML = '';
+    this._addReviewContainer.innerHTML = addReviewTemplate();
   },
 
   _setListener() {
-    const btnAddReview = $('#btn-add-review');
-    btnAddReview.on('click', (event) => {
+    const btnAddReview = document.querySelector('#btn-add-review');
+    btnAddReview.addEventListener('click', (event) => {
       this._postReview();
       event.stopPropagation();
     });
   },
 
   async _postReview() {
-    const inputName = $('#name');
-    const inputReview = $('#review');
+    const inputName = document.querySelector('#name');
+    const inputReview = document.querySelector('#review');
 
-    if (inputName.val() == '' || inputReview.val() == '') {
+    if (inputName.value == '' || inputReview.value == '') {
       alert('All field must be input');
     } else {
       const body = {
         id: this._restaurantId,
-        review: inputReview.val(),
-        name: inputName.val(),
+        review: inputReview.value,
+        name: inputName.value,
       };
-      inputName.val('');
-      inputReview.val('');
+      inputName.value = '';
+      inputReview.value = '';
       try {
         const response = await RestaurantRemoteSource.addReview(body);
         const { customerReviews } = response;
