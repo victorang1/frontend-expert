@@ -67,13 +67,15 @@ export const createMenuTemplate = ({ name }) => `
 `;
 
 export const createLikeButtonTemplate = () => `
-    <button id="btn-heart" class="btn-rounded">
+    <button id="btn-heart" aria-label="like restaurant" 
+        class="btn-rounded like-button">
         <i class="far fa-heart"></i>
     </button>
 `;
 
 export const createLikedButtonTemplate = () => `
-    <button id="btn-heart" class="btn-rounded">
+    <button id="btn-heart" aria-label="unlike restaurant" 
+        class="btn-rounded unlike-button">
         <i class="fas fa-heart"></i>
     </button>
 `;
@@ -85,10 +87,10 @@ export const createCustomerReviewItemTemplate = ({ name, review, date }) => `
         </span>
         <div class="review-item-body">
             <div class="review-header">
-                <b tabIndex="0">${name}</b>
+                <b tabIndex="0" class="reviewer-name">${name}</b>
                 <span tabIndex="0" class="review-date">(${date})</span>
             </div>
-            <div tabIndex="0">${review}</div>
+            <div tabIndex="0" class="reviewer-text">${review}</div>
         </div>
     </div>
 `;
