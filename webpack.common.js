@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 const path = require('path');
 
 module.exports = {
@@ -22,7 +24,7 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
-          }
+          },
         ],
       },
       {
@@ -31,11 +33,11 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './src/assets/images/[name].[ext]'
-            }
+              name: './src/assets/images/[name].[ext]',
+            },
           },
         ],
-      }
+      },
     ],
   },
   plugins: [
@@ -46,13 +48,24 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            ignore: ['**/images/**'],
+          },
         },
       ],
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
     }),
   ],
 };

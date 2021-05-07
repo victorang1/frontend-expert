@@ -162,9 +162,13 @@ button, a {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    background-image: url("../public/images/heros/hero-image.jpg");
+    background-image: url("../public/images/hero-image-large.jpg");
     background-position: center;
     background-color: green;
+
+    @include mobile {
+        background-image: url("../public/images/hero-image-small.jpg");
+    }
 
     &__inner {
         margin: 0 auto;
