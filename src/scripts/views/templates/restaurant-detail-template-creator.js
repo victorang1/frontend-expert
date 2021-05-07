@@ -12,9 +12,9 @@ export const createRestaurantDetailTemplate = ({
         <div class="card-container">
             <div id="action-container"></div>
             <img
-                class="img-content" 
+                class="img-content lazyload" 
                 crossorigin="anonymous"
-                src="${API_IMAGE.small(pictureId)}" 
+                data-src="${API_IMAGE.small(pictureId)}" 
                 alt="${name}" />
             <div class="card-content-body">
                 <div tabIndex="0" class="show-title">

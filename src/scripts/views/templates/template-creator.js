@@ -13,9 +13,9 @@ const createRestaurantItemTemplate = (restaurant) => `
     <article tabIndex="0" class="rest-item">
         <figure>
             <img
-                class="rest-img"
+                class="rest-img lazyload"
                 crossorigin="anonymous"
-                src="${API_IMAGE.small(restaurant.pictureId)}" 
+                data-src="${API_IMAGE.small(restaurant.pictureId)}" 
                 alt="${restaurant.name}" />
             <figcaption>${restaurant.city}</figcaption>
         </figure>
