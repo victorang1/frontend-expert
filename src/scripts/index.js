@@ -1,48 +1,26 @@
 import 'regenerator-runtime'; /* for async await transpile */
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all';
+
+import App from './views/app';
+import swRegister from './utils/sw-register';
+
 import '../styles/main.scss';
-import $ from "jquery";
-import data from '../DATA.json';
+import '../styles/detail.scss';
+import '../styles/loading.scss';
 
-const menu = $('#menu');
-const drawer = $('#drawer');
-const restaurantContainer = $('#restaurant-content');
-const topRestaurantContainer = $('#top-restaurant-content');
-
-menu.on('click', () => {
-    drawer.toggleClass('open');
-    event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  hero: document.querySelector('.hero'),
+  content: document.querySelector('#main-wrapper'),
 });
 
-data.restaurants.forEach(item => {
-    restaurantContainer.append(`
-        <article tabIndex="0" class="rest-item">
-            <figure>
-                <img class="rest-img" src="${item.pictureId}" alt="${item.name} Restaurant Image">
-                <figcaption>${item.city}</figcaption>
-            </figure>
-            <div class="rest-item-body">
-                <h2 class="rest-title">${item.name} <span class="rest-rating">(${item.rating}★)</span></h2>
-                <p>
-                    ${item.description}
-                </p>
-            </div>
-        </article>
-    `)
-})
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-data.topRestaurants.forEach(item => {
-    topRestaurantContainer.append(`
-        <article tabIndex="0" class="rest-item">
-            <figure>
-                <img class="rest-img" src="${item.pictureId}" alt="${item.name} Restaurant Image">
-                <figcaption>${item.city}</figcaption>
-            </figure>
-            <div class="rest-item-body">
-                <h2 class="rest-title">${item.name} <span class="rest-rating">(${item.rating}★)</span></h2>
-                <p>
-                    ${item.description}
-                </p>
-            </div>
-        </article>
-    `)
-})
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+});
